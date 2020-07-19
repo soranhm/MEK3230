@@ -1,0 +1,11 @@
+function dy=currdiff1(y,dx)
+l=length(y);
+i=1:l;
+im1=mod(i-2,l)+1;
+ip1=mod(i,l)+1;
+im2=mod(i-3,l)+1;
+ip2=mod(i+1,l)+1;
+s=(y(ip1)-y(im1))./(2*dx);
+%s(1)=(-y(3)+4*y(2)-3*y(1))./(2*dx);
+%s(l)=(3*y(l)-4*y(l-1)+y(l-2))./(2*dx);
+dy=s;
